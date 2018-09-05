@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ADD CUSTOMERS</title>
+<script type="text/javascript">
+function chkfrm()
+    {
+	var x=document.detail.id.value;
+	var x1=document.detail.name.value;
+	var x3=document.detail.branch.value;
+	var x4=document.detail.balance.value;
+	if(x.length==0)
+		{
+		alert("Please Enter Id \n");
+		return false; 
+		}
+	else if(x1.length==0)
+		{
+		alert("Please Enter Name \n");
+		return false;
+		}
+	
+	else if(x3.length==0)
+		{
+		alert("Please Enter branch \n");
+		return false;
+		}
+	else if(x4.length==0)
+		{
+		alert("Please Enter balance \n");
+		return false;
+		}
+	else
+		return true;
+	}
+</script>	
+</head>
+<body background="bg.jpg">
+<form name="detail" action="MainBank" method="POST" onsubmit="return chkfrm();">
+<a href="index.html"><input type="button" value="GO HOME"></a><br/><br/>
+ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id"><br/><br/>
+NAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br/><br/>
+GENDER:&nbsp;&nbsp;<input type="radio" name="gender" value="MALE">MALE<input type="radio" name="gender" value="FEMALE">FEMALE<br/><br/>
+BRANCH:&nbsp;&nbsp;&nbsp;<input type="text" name="branch"><br/><br/>
+AMOUNT:&nbsp;&nbsp;<input type="text" name="balance"><br/><br/>
+<input type="hidden" name="choose" value="Add">
+<input type="submit" value="Add"><br/></br>
+<input type="reset">
+</form>
+</body>
+</html>
